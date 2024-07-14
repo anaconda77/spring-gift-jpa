@@ -21,7 +21,7 @@ import jakarta.persistence.UniqueConstraint;
         )
     }
 )
-public class Wish {
+public class Wish extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

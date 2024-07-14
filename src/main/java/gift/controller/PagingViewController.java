@@ -1,5 +1,9 @@
 package gift.controller;
 
+import static gift.paging.PagingService.PRODUCTS_PER_PAGE;
+import static gift.paging.PagingService.SHOWING_PAGE_COUNT;
+import static gift.paging.PagingService.WISH_PER_PAGE;
+
 import gift.auth.CheckRole;
 import gift.auth.JwtService;
 import gift.auth.LoginMember;
@@ -36,9 +40,6 @@ public class PagingViewController {
     private final WishService wishService;
     private final JwtService jwtService;
     private final PagingService pagingService;
-    public static final int PRODUCTS_PER_PAGE = 10;
-    public static final int WISH_PER_PAGE = 5;
-    public static final int SHOWING_PAGE_COUNT = 10;
 
     public PagingViewController(ProductService productService, MemberService memberService,
         WishService wishService, JwtService jwtService, PagingService pagingService) {
